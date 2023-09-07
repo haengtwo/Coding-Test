@@ -2,6 +2,7 @@
 
 int main()
 {
-	printf("helloasd");
+	printf("dd");
+
 	return 0;
 }
