@@ -1,2 +1,2 @@
 # Tree (Linked & Array)
-![](./img/tree결과이미지.png)
+![]("C:\Users\김서원\Desktop\tree결과이미지.png")
