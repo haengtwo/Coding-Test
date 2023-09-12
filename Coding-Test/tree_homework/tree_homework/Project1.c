@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// 트리노드 구조체
 struct TreeNode {
     int data;
     struct TreeNode* left;
     struct TreeNode* right;
 };
 
+//새로운 노드 생성에 대한 코드
 struct TreeNode* createNode(int data) {
     struct TreeNode* newNode = (struct TreeNode*)malloc(sizeof(struct TreeNode));
     newNode->data = data;
@@ -15,6 +17,7 @@ struct TreeNode* createNode(int data) {
     return newNode;
 }
 
+//링크 전위 순회 함수
 void preorder(struct TreeNode* node) {
     if (node != NULL) {
         printf("%d ", node->data);
@@ -23,6 +26,7 @@ void preorder(struct TreeNode* node) {
     }
 }
 
+//링크 중위 순회 함수
 void inorder(struct TreeNode* node) {
     if (node != NULL) {
         inorder(node->left);
@@ -31,6 +35,7 @@ void inorder(struct TreeNode* node) {
     }
 }
 
+//링크 후위 순회 함수
 void postorder(struct TreeNode* node) {
     if (node != NULL) {
         postorder(node->left);
@@ -39,6 +44,7 @@ void postorder(struct TreeNode* node) {
     }
 }
 
+//배열 전위 순회 함수
 void arrayPreorder(struct TreeNode* node, int index) {
     if (node != NULL) {
         printf("%d ", node->data);
@@ -48,6 +54,7 @@ void arrayPreorder(struct TreeNode* node, int index) {
     
 }
 
+//배열 중위 순회 함수
 void arrayInorder(struct TreeNode* node, int index) {
     if (node != NULL) {
         arrayInorder(node->left, 2 * index + 1);
@@ -56,6 +63,7 @@ void arrayInorder(struct TreeNode* node, int index) {
     }    
 }
 
+//배열 후위 순회 함수
 void arrayPostorder(struct TreeNode* node, int index) {
     if (node != NULL) {
         arrayPostorder(node->left, 2 * index + 1);
@@ -104,7 +112,7 @@ int main() {
     arrayPostorder(root, 0);
     printf("\n\n");
 
-
+    //메모리를 해제하는 코드
     free(root->right->right->right);
     free(root->right->right->left);
     free(root->right->right);
