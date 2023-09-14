@@ -104,6 +104,7 @@ int main() {
     arrayPreorder(root, 0);
     printf("\n\n");
 
+
     printf("\n2. 중위순회\n");
     arrayInorder(root, 0);
     printf("\n\n");
