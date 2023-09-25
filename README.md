@@ -1,2 +1,2 @@
-# Tree (expression)
-![](./0919_expressionTree_training.png)
+# Tree (thread)
+![](./0921_thread_assignment.png)
