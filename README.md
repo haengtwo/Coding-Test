@@ -1,2 +1,2 @@
 # Tree (expression)
-![](./1010_priorityQueue_training.png)
+![](./1010_priorityQueue_assignment.png)
