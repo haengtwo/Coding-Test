@@ -8,8 +8,10 @@ typedef struct TreeNode {
     struct TreeNode* right;
 } TreeNode;
 
+// 이진 트리 노드 삽입 함수
 TreeNode* insert(TreeNode* root, int key) {
     if (root == NULL) {
+        // 새 노드 생성 후 값을 설정
         TreeNode* newNode = (TreeNode*)malloc(sizeof(TreeNode));
         newNode->key = key;
         newNode->left = NULL;
@@ -35,7 +37,7 @@ TreeNode* insert(TreeNode* root, int key) {
             break;
         }
     }
-
+    // 키 값을 기준으로 노드를 삽입
     if (key > root->key) {
         root->right = insert(root->right, key);
     }
@@ -45,6 +47,7 @@ TreeNode* insert(TreeNode* root, int key) {
     return root;
 }
 
+// 최대값 노드 삭제 및 횟수를 증가시키는 함수
 TreeNode* delete_max(TreeNode* root, int* count) {
     if (root == NULL) return NULL;
     TreeNode* temp;
@@ -61,7 +64,7 @@ TreeNode* delete_max(TreeNode* root, int* count) {
 }
 
 
-
+// 레벨별 트리 출력 함수
 void print_level(TreeNode* root) {
     if (root == NULL) {
         printf("트리가 빈 상태입니다.\n");
@@ -101,6 +104,7 @@ void print_level(TreeNode* root) {
     printf("\n");
 }
 
+// 메뉴 표시
 char menu_choice() {
     char choice;
     printf("\n메뉴 입력: ");
