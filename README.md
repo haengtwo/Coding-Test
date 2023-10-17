@@ -1,2 +1,3 @@
 # Tree (expression)
-![](./1010_priorityQueue_training.png)
+![](./1017_heapSort_assignment.png)
+![](./1017_huffmanCode_assignment.png)
